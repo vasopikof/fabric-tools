@@ -393,6 +393,8 @@ prereq_$OS_FLAVOR
 
 if ! docker images > /dev/null 2>&1; then
   install_docker $OS_FLAVOR
+  curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+  python get-pip.py
   pip install docker-compose
 fi
 
