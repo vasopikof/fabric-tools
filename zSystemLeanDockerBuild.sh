@@ -393,9 +393,6 @@ prereq_$OS_FLAVOR
 
 if ! docker images > /dev/null 2>&1; then
   install_docker $OS_FLAVOR
-  curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
-  python get-pip.py
-  pip install docker-compose
 fi
 
 #if ! test -d /opt/go; then
@@ -412,7 +409,7 @@ fi
 if ! behave --version > /dev/null 2>&1; then
   setup_behave
 fi
-
+pip install docker-compose
 post_build
 
 echo -e "\n\nThe Hyperledger Fabric and its supporting components have been successfully installed.\n"
