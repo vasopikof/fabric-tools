@@ -412,5 +412,5 @@ fi
 pip install docker-compose
 post_build
 
-echo -e "\n\nThe Hyperledger Fabric and its supporting components have been successfully installed.\n"
+echo -e "\n\nDocker services for The Hyperledger Fabric have been successfully installed.\n"
 exit 0
